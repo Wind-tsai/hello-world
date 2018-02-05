@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大作业</title>
+<style>
+	body{
+		background: url( img/background.png);
+	}
+	ul{
+		list-style-type: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	p{
+		font-family:幼圆;
+	}
+	#container{
+		width: 1200px;
+		margin:auto;
+	}
+	#header{
+		width: 1200px;
+		position: relative;
+	}
+	#header form{
+		position: absolute;
+		left: 600px;
+		top: 40px;
+	}
+	#weather{
+		position: absolute;
+		right: 0px;
+		top: 0;
+	}
+	#nav{
+		background-color: rgba(243,236,192,0.70);
+		width: 1200px;
+		height:215px;
+	}
+	.list{
+		width: 140px;
+		float: left;
+		margin:5px 5px 0 50px;
+		padding-right: 40px;
+		text-align: center;
+	}
+	.border{
+		border-right: 1px  #4293ae solid;
+	}
+	.list h2{
+		text-align: center;
+	}
+	.list ul{
+		width: 50px;
+		
+	}
+	.list ul li{
+		text-align: center;
+		line-height: 40px;
+	}
+	.list li a{
+		text-decoration: none;
+		color: #988f8a;
+	}
+	#leftbar{
+		background: url(img/logo.png) no-repeat 30% 97%;
+		width: 280px;
+		height: 400px;
+		float: left;
+		margin-left: 40px;
+		margin-top: 20px;
+	}
+	#leftbar a{
+		text-decoration: none;
+		font-size: 15px;
+		color: gray;
+		
+	}
+	#leftbar h3{
+		padding-left: 20px;
+		background-color: #ffeea0;
+		line-height: 50px;
+		margin-bottom: 0;
+	}
+	#leftbar ul{
+		background-color: #fff6c3;
+		margin-top:0;
+		margin-bottom: 0;
+	}
+	#leftbar li{
+		line-height: 30px;
+	}
+	#leftbar #button{
+		padding-left: 20px;
+		padding-top: 20px;
+		color: gray;
+		padding-bottom: 10px;
+	}
+	#leftbar #insure{
+		margin-top: 0px;
+		padding-left: 110px;
+		background-color: #f2af44;
+		display: block;
+	}
+	#leftbar #insure a{
+		color: black;
+		font-size: 20px;
+	}
+	#rightbar{
+		width: 730px;
+		height: 400px;
+		float: left;
+		margin-left: 100px;
+		margin-top: 20px;
+		background: url(img/zhanshi.jpg) 
+	}
+	#rightbar #empty{
+		width: 730px;
+		height: 353px;
+	}
+	#rightbar h2{
+		background:gray; 
+		filter:opacity(60%);
+		text-align: center;
+	}
+	#rightbar a{
+		color: black;
+	}
+	#rightbar a:hover{
+		color: darkorange;
+	}
+	#content{
+		width: 1200px;
+		height: 800px;
+		float: left;
+		margin-top: 30px;
+		
+	}
+	#content p{
+		color: #585858;
+		font-size: 14px;
+	}
+	#contentleft ul{
+		padding-top: 10px;
+		padding-left: 0px;
+		width:100px;
+		margin-left: 10px;
+		z-index: 2;
+	}
+	#contentleft ul li{
+		font-size: 45px;
+		width: 140px;
+	}
+	#contentleft ul li:hover{
+		background: url(img/lable.jpg) no-repeat 5% 55%;
+		background-color: white;
+	}
+	
+	#contentleft ul li a{
+		color: black;
+		line-height: 90px;
+		padding-left: 20px;
+	}
+	#contentleft{
+		float: left;
+	}
+	#contentright{
+		width: 1000px;
+		height: 740px;
+		float: left;
+		background-color: white;
+		margin-left: 30px;
+		margin-top: 10px;
+	}
+	.newstop{
+		width: 300px;
+		text-align: center;
+		float: left;
+		border: 1px solid;
+		margin-left: 25px;
+		margin-top: 40px;
+		
+	}
+	
+	#contentright img:hover{
+		 transform: scale(1.1);
+		 transition: all 1s;
+	}
+	.top2{
+		float: left;
+		width: 300px;
+		text-align: center;
+		border: 1px solid;
+		margin-left: 20px;
+		margin-top: 40px;
+		height: 330px;
+	}
+	.bottom2{
+		width: 300px;
+		text-align: center;
+		float: left;
+		border: 1px solid;
+		margin-left: 25px;
+		margin-top: 40px;
+		height: 330px;
+	}
+	#contentright a{
+		color: black;
+	}
+	.newsbottom{
+		float: left;
+		width: 300px;
+		text-align: center;
+		border: 1px solid;
+		margin-left: 20px;
+		margin-top: 40px;
+	}
+	#footer{
+		width: 1200px;
+		height: 100px;
+		clear: both;
+		margin-top: 10px;
+		border-top: 1px solid;
+		font-size: 12px;
+	}
+	#footer p{
+		text-align: center;
+		color: black;
+	}
+	#example{
+		background: url(img/lable.jpg) no-repeat 5% 55%;
+		background-color: white;
+	}
+	#content a:hover{
+		color: darkorange;
+	}
+	</style>
+</head>
+
+<body>
+	
+<div id="container">
+<div id="header">
+<div id="logo"><a href="home.html"><img src="img/logo.png"></a></div>
+<form><input type="text"/><input type="button" value="搜索"></form>
+<div id="weather"><img src="img/weather.png"></div>
+<div id="nav">
+<div class="list border">
+	<ul>
+	  
+	    <h2>新闻</h2>
+	    
+	  <li><a href="column.html">军事</a></li>
+	  <li><a href="column.html">社会</a></li>
+	  <li><a href="column.html">国际</a></li>
+	</ul>
+	</div>
+	<div class="list border">
+	<ul>
+	  
+	    <h2>财经</h2>
+	    
+	  <li><a href="column.html">股票</a></li>
+	  <li><a href="column.html">基金</a></li>
+	  <li><a href="column.html">外汇</a></li>
+	</ul>
+	</div>
+	<div class="list border">
+	<ul>
+	  
+	    <h2>体育</h2>
+	    
+	  <li><a href="column.html">NBA</a></li>
+	  <li><a href="column.html">中超</a></li>
+	  <li><a href="column.html">英超</a></li>
+	</ul>
+	</div>
+	<div class="list border">
+	<ul>
+	  
+	    <h2>娱乐</h2>
+	    
+	  <li><a href="column.html">明星</a></li>
+	  <li><a href="column.html">电影</a></li>
+	  <li><a href="column.html">星座</a></li>
+	</ul>
+	</div>
+	<div class="list">
+	<ul>
+	  
+	    <h2>汽车</h2>
+	   
+	  <li><a href="column.html">报价</a></li>
+	  <li><a href="column.html">买车</a></li>
+	  <li><a href="column.html">新车</a></li>
+	</ul>
+	</div>
+	</div>
+</div>
+<div id="leftbar">
+	<h3><a href="login.html"></a>登陆/<a href="register.html">注册</a></h3>
+	<ul>
+		<li>Email:</li>
+		<li><input type="text"></li>
+		<li>Password:</li>
+		<li><input type="password"></li>
+		<li id="button"><input type="checkbox">记住我的密码</li>
+	</ul>
+	<h3 id="insure"><a href="others/rogin done.html">登陆</a></h3>
+</div>
+<div id="rightbar">
+</div>
+<div id="content">
+	<div id="contentleft">
+		<ul>
+		  <li id="example"><a href="list.html">全部</a></li>
+		  <li><a href="list.html" target="_blank">国内</a></li>
+		  <li><a href="list.html" target="_blank">国际</a></li>
+		  <li><a href="list.html" target="_blank">科技</a></li>
+		  <li><a href="list.html" target="_blank">军事</a></li>
+		  <li><a href="list.html" target="_blank">社会</a></li>
+		  <li><a href="list.html" target="_blank">看见</a></li>
+		  <li><a href="list.html" target="_blank">历史</a></li>
+	  </ul>
+	</div>
+	<div id="contentright">
+	  <div class="newstop"><img src="img/news1.jpg" height="191" width="296"/>
+	  <h3><a href="content.html">欧洲两男子钓上200斤鲶鱼</a></h3>
+	  <p>昨日，法国斯特拉斯堡，两男子在著名的温斯顿教堂捕获一条巨大的鲶鱼</p>
+	  </div>
+	  <div class="newsbottom">
+	  <img src="img/new2.jpg" height="191" width="296"/>
+	  	<h3><a href="content.html">英国研发新式客用飞机</a></h3>
+	  <p>英国美赛的斯航空公司在7年 研发后推出了新式的客用飞机，内部装饰舒适</p>
+	  </div>
+	  <div class="newstop">
+	  <img src="img/new3.jpg" height="191" width="296"/>
+	  <h3><a href="content.html">中国最强舰队戍卫南海边疆</a></h3>
+	  <p>中国海军南海舰队配备多艘驱逐舰护卫舰、核潜艇、整体实力是三大海军最强</p>
+	  </div>
+	  <div class="bottom2">
+	  <img src="img/news6.jpg" height="191" width="296"/>
+	  	<h3><a href="content.html">杭州上千共享单车没人要</a></h3>
+	  <p>杭州某处空地，堆放着1000多共享单车，什么品牌都有，仅有两家清洁公司前来处理</p>
+	  </div>
+	  <div class="top2">
+	  <img src="img/news5.jpg" height="191" width="296"/>
+	  <h3><a href="content.html">考生准考证落水，民警下水</a></h3>
+	  <p>南京一考生误把准考证落入水中，附近民警跳入水中并将准考证拿回</p>
+	  </div>
+	  <div class="bottom2">
+	  <img src="img/news4.jpg" height="191" width="296"/>
+	  	<h3><a href="content.html">法网穆雷进四强将战瓦林卡</a></h3>
+	  <p>北京时间6月7日消息，2017法男单1/4决赛：穆雷3-1锦织圭，瓦林卡3-0西里奇 </p>
+	  </div>
+	</div>
+	<script src=""></script>
+</div>
+<div id="footer">
+	<p>隐私保护  wind公司  版权所有  京ICP证6666666</p>
+	<p>客户服务热线：4006666666   违法和不良信息举报电话   举报邮箱：jubao@liuhengyu.com</p>
+</div>
+</div>
+</body>
+</html>
